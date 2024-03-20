@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const PlayerSound = () => {
   return (
-    <div className="flex gap-x-2 max-lg:hidden mr-4 xl:mr-96 items-center">
+    <div className="flex gap-x-2 max-lg:hidden mr-4 xl:mr-80 items-center">
       <div className="">
         <Image
           src="/dgo.png"

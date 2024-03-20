@@ -1,6 +1,14 @@
 "use client";
 
-import { Headphones, ListMusic, Mic, Music, Search, Star } from "lucide-react";
+import {
+  Headphones,
+  ListMusic,
+  Mic,
+  Music,
+  Search,
+  Settings,
+  Star,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -24,51 +32,60 @@ export const AsideMenu = () => {
       style={{ opacity: 0 }}
       ref={AsideRef}
     >
-      <div className="flex gap-y-8 flex-col -ml-8 items-center mt-6 mb-12">
-        <div className="w-10 h-10">
-          <Button variant="link">
-            <Link href="/search">
-              <Search className="w-10 h-10 text-white" />
-            </Link>
-          </Button>
+      <div className="h-full">
+        <div className="flex gap-y-8 flex-col -ml-8 items-center mt-6 mb-12 ">
+          <div className="w-10 h-10">
+            <Button variant="link">
+              <Link href="/search">
+                <Search className="w-10 h-10 text-white" />
+              </Link>
+            </Button>
+          </div>
+          <div className="w-10 h-10">
+            <Button variant="link">
+              <Link href="/">
+                <Music className="w-10 h-10 text-white" />
+              </Link>
+            </Button>
+          </div>
+          <div className="w-10 h-10">
+            <Button variant="link">
+              <Link href="/top">
+                <Headphones className="w-10 h-10 text-white" />
+              </Link>
+            </Button>
+          </div>
+          <div className="w-10 h-10">
+            <Button variant="link">
+              <Link href="/podcast">
+                <Mic className="w-10 h-10 text-white" />
+              </Link>
+            </Button>
+          </div>
         </div>
-        <div className="w-10 h-10">
-          <Button variant="link">
-            <Link href="/">
-              <Music className="w-10 h-10 text-white" />
-            </Link>
-          </Button>
-        </div>
-        <div className="w-10 h-10">
-          <Button variant="link">
-            <Link href="/top">
-              <Headphones className="w-10 h-10 text-white" />
-            </Link>
-          </Button>
-        </div>
-        <div className="w-10 h-10">
-          <Button variant="link">
-            <Link href="/podcast">
-              <Mic className="w-10 h-10 text-white" />
-            </Link>
-          </Button>
-        </div>
-      </div>
-      <Separator />
-      <div className="flex gap-y-8 flex-col -ml-8 items-center mt-6 mb-12">
-        <div className="w-10 h-10">
-          <Button variant="link">
-            <Link href="/favorite">
-              <Star className="w-10 h-10 text-white" />
-            </Link>
-          </Button>
-        </div>
-        <div className="w-10 h-10">
-          <Button variant="link">
-            <Link href="/library">
-              <ListMusic className="w-10 h-10 text-white" />
-            </Link>
-          </Button>
+        <Separator />
+        <div className="flex gap-y-8 flex-col -ml-8 items-center mt-6 mb-12">
+          <div className="w-10 h-10">
+            <Button variant="link">
+              <Link href="/favorite">
+                <Star className="w-10 h-10 text-white" />
+              </Link>
+            </Button>
+          </div>
+          <div className="w-10 h-10">
+            <Button variant="link">
+              <Link href="/library">
+                <ListMusic className="w-10 h-10 text-white" />
+              </Link>
+            </Button>
+          </div>
+          <div className="w-10 h-10 mt-72">
+            <Button variant="link">
+              <Link href="/setting">
+                <Settings className="w-10 h-10 text-white" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </aside>
